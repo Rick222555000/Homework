@@ -10,37 +10,502 @@
         # Utilizar algumas ferramentas do Bootstrap Grid;
         # Fazer pequenos ajustes de leiaute com o CSS;
         # Organização/indentação do código final. 
-
-    Palheta de cores:
-        #Old Burgundy: 3b252c
-        #Amber: FFBF00
-        #Tea Green: CAFFD0
-        #Pink Lace: FDCFF3
-        #Phlox: CA3CFF
 -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/bootstrap.min.css">
-    <link rel="stylesheet" href="../style/animate.css">
-    <link rel="shortcut icon" href="../icon/Princess_Crown.ico" type="image/x-icon">
-    <title>Princess</title>
-</head>
-<body>
-    <header>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style/bootstrap.min.css">
+        <link rel="stylesheet" href="../style/animate.css">
+        <link rel="shortcut icon" href="../icon/Princess_Crown.ico" type="image/x-icon">
+        <title>Princess</title>
+        <style>
+            :root{
+                --OldBurgundy: #3b252c;
+                --Amber: #FFBF00;
+                --TeaGreen: #CAFFD0;
+                --PinkLace: #FDCFF3;
+                --Phlox: #CA3CFF;
+            }
 
+            main{
+                background-color: var(--TeaGreen) !important;
+            }
 
-    <!-- Scripts -->
+            .title{
+                color: var(--Amber) !important;
+            }
 
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery-2.2.0.min.js"></script>
-    <script src="../js/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
+            img.fullscreen {
+				width:100%;
+			}
+
+            .cardimg{
+                height: 25em;
+                width: 20em;
+            }
+
+            .up{
+                margin-bottom: 0.9em;
+            }
+
+            .pmb{
+                padding-bottom: 0.5em;
+                margin-bottom: 0px;
+                box-shadow: 0em 0.1em 5px rgba(0, 0, 0, 0.251);
+            }
+
+            figure div h4,p{
+                color: var(--OldBurgundy) !important;
+            }
+
+            .footer a{
+                text-decoration: none;
+                color: var(--OldBurgundy);
+                display: block;
+                padding: 0.5em;
+                cursor: pointer;
+            }
+
+            .footer a:hover{
+                color: var(--Phlox);
+                text-shadow: 1px 1px 3px var(--cor-sombra);
+                transition: 0.2s ease-in-out;
+            }
+
+            .footer a:hover > img{
+                padding: 0px 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top pmb" style="background-color: var(--PinkLace);">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img src="../icon/Crown.svg" class="up" alt="Uma coroa de princesa dourada" width="50" height="20" style="display: inline-block;">
+                    </a>
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="glyphicon glyphicon-menu-hamburger" style="color: #3b252c;"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav nav">
+                        <li>
+                            <a href="#home">
+                                Início
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#oqp">
+                                O que é ser uma princesa?
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" href="#">
+                                Princesa
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#brancadeneve">Branca de Neve</a>
+                                </li>
+                                <li>
+                                    <a href="#cinderela">Cinderela</a>
+                                </li>
+                                <li>
+                                    <a href="#aurora">Aurora</a>
+                                </li>
+                                <li>
+                                    <a href="#ariel">Ariel</a>
+                                </li>
+                                <li>
+                                    <a href="#bela">Bela</a>
+                                </li>
+                                <li>
+                                    <a href="#jasmine">Jasmine</a>
+                                </li>
+                                <li>
+                                    <a href="#pocahontas">Pocahontas</a>
+                                </li>
+                                <li>
+                                    <a href="#mulan">Mulan</a>
+                                </li>
+                                <li>
+                                    <a href="#tiana">Tiana</a>
+                                </li>
+                                <li>
+                                    <a href="#rapunzel">Rapunzel</a>
+                                </li>
+                                <li>
+                                    <a href="#merida">Mérida</a>
+                                </li>
+                                <li>
+                                    <a href="#moana">Moana</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input class="form-control" type="search" placeholder="Digite algo">
+                        </div>
+                        <input class="btn btn-default" type="submit" value="Pesquisar">
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container-fluid" style="padding-top: 0px;">
+				<div class="row" id="home">
+					<div id="carousel" class="carousel slide" data-ride="carousel">
+						<div class="carousel-inner" role="listbox">
+							<div class="item active">
+								<img src="../icon/bp2.jpg" alt=" Infantil" class="fullscreen">
+							</div>
+                            <div class="item">
+								<img src="../icon/bp3.jpg" alt=" Infantil" class="fullscreen">
+							</div>
+                            <div class="item">
+								<img src="../icon/bp4.jpg" alt=" Infantil" class="fullscreen">
+							</div>
+						</div>
+						<a href="#carousel" class="left carousel-control" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+						</a>
+						<a href="#carousel" class="right carousel-control" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+            <!-- O que é ser princesa? -->
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="oqp">
+                        <img src="../icon/Crown.svg" class="up" alt="Uma coroa de princesa dourada" width="50" height="30" style="display: inline-block;">
+                        <h3 class="text-center wow fadeInUp title"  data-daley="1.5s" style="display: inline-block;">O que é uma princesa?</h3>
+                        <img src="../icon/Crown.svg" class="up" alt="Uma coroa de princesa dourada" width="50" height="30" style="display: inline-block;">
+                    </div>
+                    <div class="thumbnail text-center wow fadeInUp"  data-daley="1.5s" style="margin: 0px 5em;">
+                        <p>Ser princesa é muito mais que uma simples e inocente garota presa dentro de uma torre, na qual em um dia um homem forte e bonitão vai te salvar. Ademais esse sujeito vai ser considerado, magicamente, a solução para todos seus problemas. Isso é a ideia de uma princesa? Não, ser princesa é ter suas escolhas saber se virar, enfrentar dificuldades e se aperfeiçar, essas princesas dos contos de fadas tem isso. Contudo, são ofuscadas por conta do príncipe encatantado dando a entender é necessário ser salva para ser considerada uma.</p>
+                        <p>Não acredita em mim? Vamos lá, consegue identificar uma padrão das personagens desta página? Não? Exatamente, nem todas foram salvas, mas todas fizeram suas histórias e se esforçaram para conseguir seus finais felizes. Como: a Cinderela depois de ser escravizada por anos pela madrasta conseguiu realizar seu sonho de ser livre por meio do princípe identificou-a pelo sapatinho de cristal; A Mérida salvou sua mãe de uma maldição que a fez virar um urso quase totalmente sozinha;</p>
+                        <p>A Moana salvou sua ilha ao entregar o coração de Te fiti a ilha mãe; etc. Portanto, ser princesa está longe de ser algo somente de conto de fadas há verdadeiras princesas e quem sabe "princesos" por ai a fora. Não seja um ser qualquer, seja uma princesa ou "princeso".</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Princesas -->
+
+            <div class="container-fluid">
+				<div class="row centered">
+					<div id="princesas" class="text-center">
+                        <img src="../icon/Crown.svg" class="up" alt="Uma coroa de princesa dourada" width="50" height="30" style="display: inline-block;">
+                        <h3 class="text-center wow fadeInUp title"  data-daley="1.5s" style="display: inline-block;">Princesas</h3>
+                        <img src="../icon/Crown.svg" class="up" alt="Uma coroa de princesa dourada" width="50" height="30" style="display: inline-block;">
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 thumbnail text-center wow fadeInUp"  data-daley="1.5s" id="brancadeneve" style="margin: 0.1em; padding: 2em;">
+                        <figure>
+                            <img src="../icon/brancadeneve.png" alt="" class="cardimg">
+                            <div>
+                                <h4>Branca de Neve</h4>
+                                <p>Protagonista da primeira animação cinematográfica da Disney, Branca de Neve é baseada na personagem título do conto de fadas Schneewittchen, criado pelos Irmãos Grimm. Em sua história, Branca de Neve vive em um castelo com sua madrasta, a Rainha Má, que a inveja por sua beleza, fazendo a princesa trabalhar como serviçal. Como a rainha deseja matar Branca de Neve, ela foge pela floresta, sendo acolhida pelos Sete Anões. No filme original, Adriana Caselotti é a voz da personagem.  </p>
+                            </div>
+                        </figure>
+                        <div class="btn-group">
+                            <a href="#princesas" class="btn btn-danger">
+                                <span>20</span>
+                            </a>
+                            <a href="#princesas" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-heart-empty">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 thumbnail text-center wow fadeInUp"  data-daley="1.5s" id="cinderela" style="margin: 0.1em; padding: 2em;">
+                        <figure>
+                            <img src="../icon/Cinderela.png" alt="" class="cardimg">
+                            <div>
+                                <h4>Cinderela</h4>
+                                <p>Baseada no conto de fadas original de Charles Perrault, Cinderela é a segunda princesa da linha oficial. Escravizada pela sua madrasta, a Madame Tremaine, Cinderela trabalha com os serviços da casa, e sonha com uma vida feliz. Certo dia, um convite é enviado para sua casa, aonde é avisado que haverá um baile e todas as donzelas da cidade foram convidadas. Com a ajuda de sua Fada Madrinha, ela vai ao baile e conhece o Príncipe, se apaixonando por ele perdidamente. No filme original, Ilene Woods interpreta a personagem.</p>
+                            </div>
+                        </figure>
+                        <div class="btn-group">
+                            <a href="#princesas" class="btn btn-danger">
+                                <span>100</span>
+                            </a>
+                            <a href="#princesas" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-heart-empty">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 thumbnail text-center wow fadeInUp"  data-daley="1.5s" id="aurora" style="margin: 0.1em; padding: 2em;">
+                        <figure>
+                            <img src="../icon/aurora.png" alt="" class="cardimg">
+                            <div>
+                                <h4>Aurora</h4>
+                                <p>Aurora é a terceira princesa da linha oficial, baseada no conto de fadas Dornröschen dos Irmãos Grimm.  Em sua história, uma fada malvada chamada Malévola coloca uma maldição sobre Aurora, na qual aos 16 anos, ela vai espetar o dedo na roca de fiar, e morrerá. No entanto, a fada Primavera reverte o feitiço, fazendo com que ao espertar o dedo, ela vai dormir, sendo acordada pelo beijo de amor verdadeiro. Ao se passar os 16 anos, Aurora espeta o dedo, e só com a ajuda de seu verdadeiro amor, o príncipe Phillip, ela consegue acordar de seu sono. Mary Costa desempenha a voz da personagem no filme original.</p>
+                            </div>
+                        </figure>
+                        <div class="btn-group">
+                            <a href="#princesas" class="btn btn-danger">
+                                <span>15</span>
+                            </a>
+                            <a href="#princesas" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-heart-empty">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 thumbnail text-center wow fadeInUp"  data-daley="1.5s" id="ariel" style="margin: 0.1em; padding: 2em;">
+                        <figure>
+                            <img src="../icon/ariel.png" alt="" class="cardimg">
+                            <div>
+                                <h4>Ariel</h4>
+                                <p>Vagamente baseada na personagem título do conto de fadas Den lille havfrue de Hans Christian Andersen, Ariel é a quarta Princesa Disney. Em seu filme, Ariel, uma sereia filha do Rei Tritão, se apaixona pelo príncipe Eric, que vive sobre terra. Para poder encontrar com seu verdadeiro amor, ela vai até a bruxa do mar Úrsula, e oferece sua voz para poder virar humana. No entanto, se ela não conseguir fazer com que Eric se apaixone por ela, se tornará escrava de Úrsula para sempre. Com a ajuda de seu pai, Ariel consegue voltar a ser humana novamente, e se casa com Eric. Sua voz original é de Jodi Benson.</p>
+                            </div>
+                        </figure>
+                        <div class="btn-group">
+                            <a href="#princesas" class="btn btn-danger">
+                                <span>73</span>
+                            </a>
+                            <a href="#princesas" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-heart-empty">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 thumbnail text-center wow fadeInUp"  data-daley="1.5s" id="bela" style="margin: 0.1em; padding: 2em;">
+                        <figure>
+                            <img src="../icon/bella.png" alt="" class="cardimg">
+                            <div>
+                                <h4>Bela</h4>
+                                <p>Bela, cujo o nome original significa "beleza" em francês, é baseada na personagem do conto de fadas francês La Belle et la Bête de Gabrielle-Suzanne Barbot. Bela esta inconformada com a vida simples que leva em seu vilarejo, e almeja viver grandes aventuras. Certo dia, seu pai acaba se tornando prisioneiro de uma fera, e para liberta-lo, ela se coloca em seu lugar. No entanto, no processo, ela acaba descobrindo que a Fera não é o monstro que todos pensam, e o amor acaba surgindo inesperadamente. Bela foi originalmente interpretada por Paige O'Hara.</p>
+                            </div>
+                        </figure>
+                        <div class="btn-group">
+                            <a href="#princesas" class="btn btn-danger">
+                                <span>73</span>
+                            </a>
+                            <a href="#princesas" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-heart-empty">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 thumbnail text-center wow fadeInUp"  data-daley="1.5s" id="jasmine" style="margin: 0.1em; padding: 2em;">
+                        <figure>
+                            <img src="../icon/jasmine.png" alt="" class="cardimg">
+                            <div>
+                                <h4>Jasmine</h4>
+                                <p>Jasmine é a sexta princesa da linha oficial, é também a primeira e única princesa do oriente médio até então , baseada na Princesa Badroulbadour do conto Aladim e a Lâmpada Maravilhosa, que pertence ao livro As Mil e uma Noites. Em seu filme, Jasmine esta cansada de sua vida no palácio, e decide fugir, se disfarçando. No mercado público, ela conhece Aladdin, que vive nas ruas de Agrabah. Para conquistar a princesa, ele se disfarça do Príncipe Ali, com a ajuda do Gênio, e os dois se apaixonam. Jasmine descobre a verdade, e o feiticeiro do mal, Jafar, tenta dominar o mundo, o que Aladdin impede até o fim do filme. Diferente das princesas anteriores a ela, Jasmine não se casou em seu filme original. Sua voz original é de Linda Larkin (diálogos) e Lea Salonga (canções).</p>
+                            </div>
+                        </figure>
+                        <div class="btn-group">
+                            <a href="#princesas" class="btn btn-danger">
+                                <span>93</span>
+                            </a>
+                            <a href="#princesas" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-heart-empty">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 thumbnail text-center wow fadeInUp"  data-daley="1.5s" id="pocahontas" style="margin: 0.1em; padding: 2em;">
+                        <figure>
+                            <img src="../icon/pocahontas.png" alt="" class="cardimg">
+                            <div>
+                                <h4>Pocahontas</h4>
+                                <p>Filha de um chefe indígena, Pocahontas é a sétima princesa na linha oficial, baseada em Matoaka 2 . Em sua história, Pocahontas é filha do Chefe Powhatan e vive em uma tribo no estado da Virgínia. Os colonos visitam as terras onde ela mora, procurando ouro, e ela acaba se apaixonando por um deles, John Smith. No entanto, ela acaba sendo descoberta por Kocoum, um índio de sua tribo que foi proposto para se casar com ela, e no processo, ele acaba morrendo. Isso gera uma guerra, que só termina com a intromissão da princesa. Diferente das princesas anteriores a ela, Pocahontas não terminou com seu interesse amoroso no final do filme. Em seu filme original, ela tem a voz deIrene Bedard (diálogos) e Judy Kuhn (canções).</p>
+                            </div>
+                        </figure>
+                        <div class="btn-group">
+                            <a href="#princesas" class="btn btn-danger">
+                                <span>86</span>
+                            </a>
+                            <a href="#princesas" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-heart-empty">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 thumbnail text-center wow fadeInUp"  data-daley="1.5s" id="mulan" style="margin: 0.1em; padding: 2em;">
+                        <figure>
+                            <img src="../icon/mulan.png" alt="" class="cardimg">
+                            <div>
+                                <h4>Mulan</h4>
+                                <p>Mulan é a única personagem da franquia que não é uma princesa de verdade, seja por nascimento ou casamento, mais é incluída como parte da franquia, sendo a oitava princesa na linha oficial. Baseada na personagem do poema chinês The Ballad of Hua Mulan, Mulan é uma jovem atrapalhada, filha de um antigo herói de guerra. Certo dia, um aviso diz que seu pai deve se unir ao exército chinês para lutar contra a invasão dos Hunos. Sabendo que ele não sobreviveria, Mulan se veste de soldado e vai em seu lugar. Embora ela consiga ultrapassar todos os obstáculos dos treinamentos, ela caba sendo descoberta e deixada para trás. No final do filme, ela salva a vida do Imperador. Sua voz original é de Ming-Na Wen (diálogos) e Lea Salonga (canções).</p>
+                            </div>
+                        </figure>
+                        <div class="btn-group">
+                            <a href="#princesas" class="btn btn-danger">
+                                <span>150</span>
+                            </a>
+                            <a href="#princesas" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-heart-empty">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 thumbnail text-center wow fadeInUp"  data-daley="1.5s" id="tiana" style="margin: 0.1em; padding: 2em;">
+                        <figure>
+                            <img src="../icon/tiana.png" alt="" class="cardimg">
+                            <div>
+                                <h4>Tiana</h4>
+                                <p>Vagamente baseada na personagem do conto de fadas The Frog Prince dos Irmãos Grimm, Tiana é a nona princesa da linha oficial. Ela sonha em abrir um restaurante, e juntou dinheiro a vida toda para isso. No entanto, certo dia, ela conhece um sapo, que diz ser um príncipe, e que vai ajudar ela a realizar seu desejo, se ela der um beijo nele. Tiana faz o combinado, mas acaba também se tornando um sapo. Eles então seguem em uma jornada para tentar descobrir como voltarão a ser humanos, o que resulta nos dois se apaixonando. Tiana tem a voz de original de Anika Noni Rose.</p>
+                            </div>
+                        </figure>
+                        <div class="btn-group">
+                            <a href="#princesas" class="btn btn-danger">
+                                <span>99</span>
+                            </a>
+                            <a href="#princesas" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-heart-empty">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 thumbnail text-center wow fadeInUp"  data-daley="1.5s" id="rapunzel" style="margin: 0.1em; padding: 2em;">
+                        <figure>
+                            <img src="../icon/rapunzel.png" alt="" class="cardimg">
+                            <div>
+                                <h4>Rapunzel</h4>
+                                <p>Baseada no conto de fadas Alemão, dos Irmãos Grimm, Rapunzel é a décima princesa da linha oficial. Diferente de seu conto de origem, Rapunzel não é uma donzela em perigo. Certo dia, um ladrão vai até sua torre, se esconder, mas acaba se tornando refém da jovem. Ela faz um acordo com ele, aonde ela devolverá a bolsa de Flynn Rider (o ladrão), em troca de ele levar ela para ver as lanternas flutuantes, um evento que acontece todo ano em seu aniversário. Ele concorda, e entre muitas confusões, os dois acabam se apaixonando. No filme original, a voz de Rapunzel é desempenhada por Mandy Moore.</p>
+                            </div>
+                        </figure>
+                        <div class="btn-group">
+                            <a href="#princesas" class="btn btn-danger">
+                                <span>40</span>
+                            </a>
+                            <a href="#princesas" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-heart-empty">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 thumbnail text-center wow fadeInUp"  data-daley="1.5s" id="merida" style="margin: 0.1em; padding: 2em;">
+                        <figure>
+                            <img src="../icon/merida.png" alt="" class="cardimg">
+                            <div>
+                                <h4>Mérida</h4>
+                                <p>A primeira princesa que não é baseada em qualquer conto, lenda ou figura histórica é Mérida, a décima primeira princesa da linha oficial e também a primeira princesa do estúdio Pixar (o mesmo das franquias Carros e Toy Story). Em seu filme, Mérida é uma jovem que quer seguir o próprio destino, mas sua mãe, a Rainha Elinor, quer ensinar a princesa a como ser uma boa rainha, se casando com um príncipe, algo que Mérida não aceita. Querendo viver a vida de seu modo, Mérida decide ir até uma bruxa, para conseguir uma poção para mudar o próprio destino, no entanto, a poção transforma Elinor em um urso, e Mérida terá que desfazer o feitiço em dois dias, se não, sua mãe será um urso para sempre. Seguindo em uma grande jornada, Mérida irá descobrir seu próprio destino. A voz original de Mérida é de Kelly Macdonald.</p>
+                            </div>
+                        </figure>
+                        <div class="btn-group">
+                            <a href="#princesas" class="btn btn-danger">
+                                <span>87</span>
+                            </a>
+                            <a href="#princesas" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-heart-empty">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 thumbnail text-center wow fadeInUp"  data-daley="1.5s" id="moana" style="margin: 0.1em; padding: 2em;">
+                        <figure>
+                            <img src="../icon/moana.png" alt="" class="cardimg">
+                            <div>
+                                <h4>Moana</h4>
+                                <p>Moana é uma protagonista do filme da Disney de 2016, Moana: Um Mar de Aventuras. Ela é a primeira Princesa da Disney Polinésia, a segunda filha de um chefe e vai dividir o posto de princesa mais jovem com Branca de Neve. Ela a 12a princesa na franquia. Ela é a segunda princesa que não tem interesse amoroso depois de Mérida. A voz original da Moana é de Auli'i Cravalho. </p>
+                            </div>
+                        </figure>
+                        <div class="btn-group">
+                            <a href="#princesas" class="btn btn-danger">
+                                <span>87</span>
+                            </a>
+                            <a href="#princesas" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-heart-empty">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer style="background-color: rgba(0, 0, 0, 0.1);padding-top: 10px;">
+            <div class="container">
+                <div class="row" style="padding: 10px;">
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <h4 style="margin-top: 10px; margin-bottom: 15px; color: var(--OldBurgundy); text-transform: uppercase; letter-spacing: 2px;">Siga-me</h4>
+                        </div>
+                        <ul style="list-style: none; margin: 0px auto;">
+                            <li class="footer">
+                                <a href="https://github.com/Rick222555000" target="_blank">
+                                    <img src="../icon/github.svg" alt="">
+                                    Github
+                                </a>
+                            </li>
+                            <li class="footer">
+                                <a href="https://www.facebook.com/profile.php?id=100008299009159" target="_blank">
+                                    <img src="../icon/facebook.svg" alt="">
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer">
+                                <a href="https://twitter.com/Rikelmy_Magno" target="_blank">
+                                    <img src="../icon/twitter.svg" alt="">
+                                    Twitter
+                                </a>
+                            </li>
+                            <li class="footer">
+                                <a href="https://www.instagram.com/rikelmy_magno/" target="_blank">
+                                    <img src="../icon/instagram.svg" alt="">
+                                    Instagram
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <h4 style="margin-top: 10px; margin-bottom: 15px; color: var(--OldBurgundy); text-transform: uppercase; letter-spacing: 2px;">Parceria</h4>
+                        </div>
+                        <div>
+                            <a href="https://disney.com.br/" target="_blank">
+                                <img src="../icon/disney.png" alt="" style="display: block !important; margin: auto;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <h4 style="margin-top: 10px; margin-bottom: 15px; color: var(--OldBurgundy);">Contate-nos</h4>
+                        <p>
+                            E-mail: 
+                            <a href="mailto:rikelmymagno@gmail.com">rikelmymagno@gmail.com</a>
+                        </p>
+                        <p>
+                            Telefone:
+                            <a href="tel:none">(XX) XXXX-XXXXX</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+
+        <script src="../js/jquery-2.2.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+    </body>
 </html>
