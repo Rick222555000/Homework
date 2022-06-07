@@ -1,0 +1,305 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;0,900;1,200&display=swap');
+
+:root {
+    /* palheta */
+
+    --mentaMagica: #A0EEC0;
+    --mentaMagicaEscura : #8AE9C1;
+    --pistachi: #86CD82;
+    --verdeFloresta: #72A276;
+    --dimGray: #666B6A;
+    --branco: #ffffff;
+
+    /* sombra */
+    --sombra: 3px 3px 5px rgba(0, 0, 0, 0.2);
+
+    /* trasição */
+    --linear: all 0.4s linear;
+
+    /* arredondamento */
+    --bordaC: 3px;
+
+    /* Borda jogo da velha */
+    --bordaJ: 4px solid black;
+
+    /* Cores de placares */
+    --sonico: #17569b;
+    --peixe: #f0d438 ; 
+    --empate: #137413;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 100%;
+    transition: var(--linear);
+}
+
+body{
+    background-color: var(--verdeFloresta);
+}
+
+.header {
+    text-align: center;
+    margin: 1.1em 0em;
+}
+
+.header h1 {
+    color: var(--branco);
+    font-size: 3em;
+    text-shadow: var(--sombra);
+}
+
+.main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.borda {
+    border: 1px solid var(--dimGray);
+    border-radius: var(--bordaC);
+    margin: 5px;
+    padding: 5px;
+    box-shadow: var(--sombra);
+}
+
+.linha{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.linha-botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 5em;
+}
+
+.botao1{
+    position: absolute;
+    top: 5px;
+    right: 1em;
+}
+
+.botao2{
+    position: absolute;
+    top: 5px;
+    left: 1em;
+}
+
+.caixa {
+    width: 40%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.opostos {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    background-color: var(--branco);
+}
+
+#resJogo {
+    font-size: 3em;
+    font-weight: bold;
+    color: black;
+}
+
+.opostos h3 {
+    font-size: 1.5em;
+    margin-top: 5px;
+}
+
+.opostos img {
+    background-color: var(--pistachi);
+}
+.conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.conteudo img {
+    height: 100px;
+    width: 100px;
+}
+
+.placarGanho {
+    font-size: 3em;
+    height: 2em;
+    width: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pistachi);
+}
+
+#jogo {
+    width: 612px;
+    height: 612px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.casa {
+    width: 200px;
+    height: 200px;
+    background-color: var(--branco);
+    box-shadow: var(--sombra);
+    cursor: pointer;
+    background-position: center center;
+    background-size: cover;
+}
+
+#casa1{
+    border-bottom: var(--bordaJ);
+    border-right: var(--bordaJ);
+    border-top-left-radius: var(--bordaC);
+}
+
+#casa2{
+    border-bottom: var(--bordaJ);
+    border-right: var(--bordaJ);
+    border-top: var(--bordaJ);
+}
+
+#casa3{
+    border-top: var(--bordaJ);
+    border-right: var(--bordaJ);
+    border-bottom-left-radius: var(--bordaC);
+}
+
+#casa4{
+    border-bottom: var(--bordaJ);
+    border-right: var(--bordaJ);
+    border-left: var(--bordaJ);
+}
+
+#casa5{
+    border: var(--bordaJ);
+}
+
+#casa6{
+    border-top: var(--bordaJ);
+    border-right: var(--bordaJ);
+    border-left: var(--bordaJ);
+}
+
+#casa7{
+    border-bottom: var(--bordaJ);
+    border-left: var(--bordaJ);
+    border-top-right-radius: var(--bordaC);
+}
+
+#casa8{
+    border-bottom: var(--bordaJ);
+    border-left: var(--bordaJ);
+    border-top: var(--bordaJ);
+}
+
+#casa9{
+    border-top: var(--bordaJ);
+    border-left: var(--bordaJ);
+    border-bottom-right-radius: var(--bordaC);
+}
+
+.indicador {
+    font-size: 1.1em;
+    color: var(--dimGray);
+    margin-left: 0.4em;
+    margin-top: 0.4em;
+}
+
+
+.botao {
+    padding: 1em;
+    color: var(--dimGray);
+    border-radius: var(--bordaC);
+    cursor: pointer;
+    box-shadow: var(--sombra);
+    background-color: var(--mentaMagica);
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.botao:hover {
+    background-color: var(--mentaMagicaEscura);
+    color: var(--branco);
+    transform: scale(1.01);
+    font-size: 0.95em;
+}
+
+.footer {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5em;
+}
+
+.footer h3 {
+    font-size: 2.5em;
+    text-shadow: var(--sombra);
+    color: var(--branco);
+    margin-bottom: 0.6em;
+}
+
+.circulo-perfil a img {
+    display: block;
+    height: 20em;
+    width: 20em;
+    border: 0.5em solid var(--branco);
+    border-radius: 50%;
+    box-shadow: var(--sombra);
+}
+
+.circulo-perfil:hover a img{
+    transform: scale(1.01);
+}
+
+.circulo-perfil > p {
+    display: none; 
+}
+
+.circulo-perfil:hover > p {
+    display: block;
+    font-size: 1.1em;
+    text-shadow: var(--sombra);
+    color: var(--branco);
+    text-align: center;
+    margin-top: 0.9em;
+}
+
+@media (max-width: 625px) {
+    *{
+        font-size: 90%;
+    }
+    
+    #jogo {
+        width: 306px;
+        height: 306px;
+    }
+     
+    .casa {
+        width: 100px;
+        height: 100px;
+    }
+
+    .conteudo img {
+        height: 50px;
+        width: 50px;
+    }
+}

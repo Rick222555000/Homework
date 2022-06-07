@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da velha</title>
+    <link rel="shortcut icon" href="img/velha.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="estilo.css"/>
+</head>
+<body>
+    <header class="header">
+        <h1>Jogo da velha dos memes</h1>
+    </header>
+    <main class="main">
+        <div class="caixa">
+            <div class="opostos borda">
+                <p id="resJogo">Jogue em uma casa</p>
+            </div>
+
+            <div id="blocoPeixe" class="opostos borda">
+                <div class="conteudo">
+                    <h3>Peixe</h3>
+                    <img src="img/peixe.png" class="borda" alt="Um garoto de cabelos pretos com terno e gravata pretos. Ele tem cor de pele branca">
+                </div>
+                
+                <div class="conteudo">
+                    <h3>Ganhou</h3>
+                    <p id="peixe" class="borda placarGanho">0</p>
+                </div>
+
+                <div class="conteudo">
+                    <h3>Descrição</h3>
+                    <p class="borda">O peixe é um meme que surgiu para representar uma pessoa que está vivenciando um pânico extremo e pede ajuda a Deus para passar de tal situação.</p>
+                </div>
+            </div>
+
+            <div id="blocoSonico" class="opostos borda">
+                <div class="conteudo">
+                    <h3>Sonico</h3>
+                    <img src="img/sonico.png" class="borda" alt="Um garoto de cabelos pretos com terno e gravata pretos. Ele tem cor de pele branca">
+                </div>
+
+                <div class="conteudo">
+                    <h3>Ganhou</h3>
+                    <p id="sonico" class="borda placarGanho">0</p>
+                </div>
+
+                <div class="conteudo">
+                    <h3>Descrição</h3>
+                    <p class="borda">O Sonico é um meme que faz ironia com o personagem da Sega colocando-o em situação bem perígo que exige correria.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="linha">
+            <div class="caixa">
+                <div id="jogo">
+                    <div>
+                        <div class="casa" id="casa1" onclick="jogar(casa1)"><span class="indicador">1</span></div>
+                        <div class="casa" id="casa2" onclick="jogar(casa2)"><span class="indicador">2</span></div>
+                        <div class="casa" id="casa3" onclick="jogar(casa3)"><span class="indicador">3</span></div>
+                    </div>
+                    <div>
+                        <div class="casa" id="casa4" onclick="jogar(casa4)"><span class="indicador">4</span></div>
+                        <div class="casa" id="casa5" onclick="jogar(casa5)"><span class="indicador">5</span></div>
+                        <div class="casa" id="casa6" onclick="jogar(casa6)"><span class="indicador">6</span></div>
+                    </div>
+                    <div>
+                        <div class="casa" id="casa7" onclick="jogar(casa7)"><span class="indicador">7</span></div>
+                        <div class="casa" id="casa8" onclick="jogar(casa8)"><span class="indicador">8</span></div>
+                        <div class="casa" id="casa9" onclick="jogar(casa9)"><span class="indicador">9</span></div>
+                    </div>
+                </div>
+                <div class="linha-botao">
+                    <div class="botao1"><input type="button" value="Nova partida" onclick="restart()" class="botao"></div>
+                    <div class="botao2"><input type="button" value="Resetar jogo" onclick="zerar()" class="botao"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <h3>Créditos</h3>
+        <div class="circulo-perfil">
+            <a href="https://github.com/Rick222555000" target="_blank" rel="external">
+                <img src="img/perfil.jpg" alt="Um garoto de cabelos pretos com terno e gravata pretos. Ele tem cor de pele branca">
+            </a>
+            <p>Rikelmy Magno de Oliveira</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="jogo.js"></script>
+</body>
+</html>
