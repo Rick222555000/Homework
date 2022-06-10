@@ -1,3 +1,10 @@
+
+- [1. Homework](#1-homework)
+  - [1.1. Princess](#11-princess)
+  - [1.2. Hash game](#12-hash-game)
+  - [1.3. Exercises](#13-exercises)
+
+
 # 1. Homework 
 Esta pasta tem como objetivo armazenar todos meus projetos escolares para ver o quanto evolui.
 
@@ -15,3 +22,6 @@ Foi um trabalho no qual o professor exigia certos parâmetros além do jogo da v
 | 4          |                             Melhorar quando se começa a verificar ganhador                              |        10 |
 | 5          |                                    Implementar placar (localStorage)                                    |        10 |
 | 6          | Melhorar a verificação das linhas para saber se alguém ganhou (reduzir de 8 verificações para o mínimo) |        20 |
+
+## 1.3. Exercises
+São exercícios que fiz em sala de aula para revisar assuntos da escola.
